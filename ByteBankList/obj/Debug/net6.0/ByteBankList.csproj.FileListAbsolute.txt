@@ -1,0 +1,15 @@
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.csproj.AssemblyReference.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.AssemblyInfoInputs.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.AssemblyInfo.cs
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.csproj.CoreCompileInputs.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\bin\Debug\net6.0\ByteBankList.exe
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\bin\Debug\net6.0\ByteBankList.deps.json
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\bin\Debug\net6.0\ByteBankList.runtimeconfig.json
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\bin\Debug\net6.0\ByteBankList.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\bin\Debug\net6.0\ByteBankList.pdb
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\refint\ByteBankList.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.pdb
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ByteBankList.genruntimeconfig.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\List-Lambda-Linq\ByteBankList\obj\Debug\net6.0\ref\ByteBankList.dll
