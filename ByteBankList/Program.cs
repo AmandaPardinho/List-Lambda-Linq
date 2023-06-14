@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ByteBankList.SistemaAgencia;
 using ByteBankList.Modelos.Conta;
+using ByteBankList.Extensoes;
 
 namespace ByteBankList
 {
@@ -32,7 +33,7 @@ namespace ByteBankList
             for (int i = 0; i < idades.Count; i++)
             {
                 int idadeAtual = idades[i];
-                Console.WriteLine(idadeAtual);
+                Console.WriteLine($"{idadeAtual}\n");
             }            
 
             Console.ReadKey();
