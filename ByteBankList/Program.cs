@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ByteBankList.SistemaAgencia;
 using ByteBankList.Modelos.Conta;
 using ByteBankList.Extensoes;
+using ByteBankList.Modelos.Util;
 
 namespace ByteBankList
 {
@@ -13,6 +14,17 @@ namespace ByteBankList
     {
         static void Main(string[] args)
         {
+
+            /* var => (inferência de tipo de variável)
+             * palavra reservada do .Net
+             * faz com que o compilador assuma que seu valor será igual ao do tipo que foi atribuído à variável criada
+             * não é possível usar o 'var' quando não inicializamos/atribuímos a variável
+             */
+
+            var conta = new ContaCorrente(347, 147852369);
+            var gerenciador = new GerenciadorBonificacao();
+            var gerenciadores = new List<GerenciadorBonificacao>();
+
             List<int> idades = new List<int>();
 
             idades.Add(1);
