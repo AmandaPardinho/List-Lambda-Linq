@@ -12,20 +12,28 @@ namespace ByteBankList
     {
         static void Main(string[] args)
         {
-            Lista<int> idades = new Lista<int>();
+            List<int> idades = new List<int>();
 
-            idades.Adicionar(5);
-            idades.AdicionarVarios(1, 5, 78);
+            idades.Add(1);
+            idades.Add(5);
+            idades.Add(14);
+            idades.Add(25);
+            idades.Add(38);
+            idades.Add(61);
 
-            int idadeSoma = 0;
-            for (int i = 0; i < idades.Tamanho; i++)
+            //o método pode ser chamado assim
+            ListExtensoes.AdicionarVarios(idades, 1, 56, 26, 17, 98);
+
+            //ou assim (tem o argumento que referencia a lista implícito)
+            idades.AdicionarVarios(6, 2, 11, 87);
+
+            //idades.Remove(5);
+                        
+            for (int i = 0; i < idades.Count; i++)
             {
                 int idadeAtual = idades[i];
                 Console.WriteLine(idadeAtual);
-            }
-
-            Console.WriteLine(SomarVarios(1, 2, 3, 5, 56465, 45));
-            Console.WriteLine(SomarVarios(1, 2, 45));
+            }            
 
             Console.ReadKey();
         }
