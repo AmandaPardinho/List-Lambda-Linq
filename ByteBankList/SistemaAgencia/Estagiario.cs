@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ByteBankArrays.Modelos.Funcionarios;
+using ByteBankList.Modelos.Funcionarios;
 
 namespace ByteBankList.SistemaAgencia
 {
