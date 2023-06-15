@@ -7,25 +7,60 @@ using ByteBankList.SistemaAgencia;
 using ByteBankList.Modelos.Conta;
 using ByteBankList.Extensoes;
 using ByteBankList.Modelos.Util;
+using ByteBankList.Comparadores;
 
 namespace ByteBankList
 {
     public class Program
     {
         static void Main(string[] args)
+        { 
+            var contas = new List<ContaCorrente>() 
+            { 
+                new ContaCorrente(341, 57480),
+                new ContaCorrente(342, 45678),
+                new ContaCorrente(340, 1),
+                new ContaCorrente(340, 99999),
+                new ContaCorrente(340, 48950),
+                new ContaCorrente(290, 18950)
+            };
+
+            //contas.Sort(); => Chama a implementação dada em IComparable
+
+            contas.Sort(new ComparadorContaCorrenteAgencia());
+
+            foreach (var conta in contas)
+            {
+                Console.WriteLine($"Número da conta: {conta.Numero}\nAgência: {conta.Agencia}");
+            }
+
+            Console.ReadKey();
+        }
+
+        static void TestaSort()
         {
+            var nomes = new List<string>()
+            {
+                "Fábio",
+                "Ana",
+                "Julio",
+                "Rafael",
+                "Juliana"
+            };
 
-            /* var => (inferência de tipo de variável)
-             * palavra reservada do .Net
-             * faz com que o compilador assuma que seu valor será igual ao do tipo que foi atribuído à variável criada
-             * não é possível usar o 'var' quando não inicializamos/atribuímos a variável
-             */
+            nomes.Add("Guilherme");
+            nomes.Add("Amanda");
+            nomes.AdicionarVarios("Luana", "Wellington", "Pedro");
 
-            var conta = new ContaCorrente(347, 147852369);
-            var gerenciador = new GerenciadorBonificacao();
-            var gerenciadores = new List<GerenciadorBonificacao>();
+            nomes.Sort();
 
-            List<int> idades = new List<int>();
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+            Console.WriteLine();
+
+            var idades = new List<int>();
 
             idades.Add(1);
             idades.Add(5);
@@ -35,20 +70,21 @@ namespace ByteBankList
             idades.Add(61);
 
             //o método pode ser chamado assim
-            ListExtensoes.AdicionarVarios(idades, 1, 56, 26, 17, 98);
+            ListExtensoes.AdicionarVarios(idades, 56, 26, 17, 98);
 
             //ou assim (tem o argumento que referencia a lista implícito)
-            idades.AdicionarVarios(6, 2, 11, 87);
+            idades.AdicionarVarios(6, 2, 11, 87, 99);
 
             //idades.Remove(5);
-                        
+
+            //método para ordenar o conteúdo da lista
+            idades.Sort();
+
             for (int i = 0; i < idades.Count; i++)
             {
                 int idadeAtual = idades[i];
-                Console.WriteLine($"{idadeAtual}\n");
-            }            
-
-            Console.ReadKey();
+                Console.WriteLine(idadeAtual);
+            }
         }
 
         static void TestaListaObject()
@@ -148,6 +184,19 @@ namespace ByteBankList
             }
 
             Console.ReadKey();
+        }
+
+        static void ExemploVar()
+        {
+            /* var => (inferência de tipo de variável)
+           * palavra reservada do .Net
+           * faz com que o compilador assuma que seu valor será igual ao do tipo que foi atribuído à variável criada
+           * não é possível usar o 'var' quando não inicializamos/atribuímos a variável
+           */
+
+            var conta = new ContaCorrente(347, 147852369);
+            var gerenciador = new GerenciadorBonificacao();
+            var gerenciadores = new List<GerenciadorBonificacao>();
         }
     }
 }
