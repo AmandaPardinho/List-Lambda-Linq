@@ -20,18 +20,33 @@ namespace ByteBankList
                 new ContaCorrente(341, 57480),
                 new ContaCorrente(342, 45678),
                 new ContaCorrente(340, 1),
+                null,
+                null,
                 new ContaCorrente(340, 99999),
                 new ContaCorrente(340, 48950),
+                null,
                 new ContaCorrente(290, 18950)
             };
 
             //contas.Sort(); => Chama a implementação dada em IComparable
 
-            contas.Sort(new ComparadorContaCorrenteAgencia());
+            //contas.Sort(new ComparadorContaCorrenteAgencia());
 
-            foreach (var conta in contas)
+            IOrderedEnumerable<ContaCorrente> contasOrdenada = contas.OrderBy(conta => 
+            { 
+                if(conta == null)
+                {
+                    return int.MaxValue;
+                }
+                return conta.Numero; 
+            });
+
+            foreach (var conta in contasOrdenada)
             {
-                Console.WriteLine($"Número da conta: {conta.Numero}\nAgência: {conta.Agencia}");
+                if(conta != null)
+                {
+                    Console.WriteLine($"Número da conta: {conta.Numero}\nAgência: {conta.Agencia}");
+                }
             }
 
             Console.ReadKey();
