@@ -32,21 +32,25 @@ namespace ByteBankList
 
             //contas.Sort(new ComparadorContaCorrenteAgencia());
 
-            IOrderedEnumerable<ContaCorrente> contasOrdenada = contas.OrderBy(conta => 
-            { 
-                if(conta == null)
-                {
-                    return int.MaxValue;
-                }
-                return conta.Numero; 
-            });
-
-            foreach (var conta in contasOrdenada)
+            /*var listaSemNulos = new List<ContaCorrente>();
+            foreach (var conta in contas) 
             {
                 if(conta != null)
                 {
-                    Console.WriteLine($"Número da conta: {conta.Numero}\nAgência: {conta.Agencia}");
-                }
+                    listaSemNulos.Add(conta);
+                } 
+            }
+
+            var contasNaoNulas = contas.Where(conta => conta != null);*/
+
+            var contasOrdenada = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
+
+            foreach (var conta in contasOrdenada)
+            {
+                Console.WriteLine($"Número da conta: {conta.Numero}\nAgência: {conta.Agencia}");
+                
             }
 
             Console.ReadKey();
